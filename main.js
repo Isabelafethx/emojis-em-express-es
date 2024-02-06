@@ -16,7 +16,7 @@ Webcam.attach('#camera');
 function takeSnapshot()
 {
     Webcam.snap(function(data_uri) {
-        document.getElementById("result").innerHTML = '<img id="captured_image" src"'+data_uri+'"/>';
+        document.getElementById("result").innerHTML = '<img id="captured_image" src="'+data_uri+'"/>';
     });
 }
 
@@ -49,7 +49,7 @@ function gotResult(error, results) {
         document.getElementById("resultEmotionName").innerHTML = results[0].label;
         document.getElementById("resultEmotionName2").innerHTML = results[1].label;
         prediction1 = results[0].label;
-        prediction02 = results[1].label;
+        prediction2 = results[1].label;
         speak();
         if(results[0].label == "feliz")
         {
@@ -59,7 +59,7 @@ function gotResult(error, results) {
      { 
        document.getElementById("updateEmoji").innerHTML = "&#128532;";
 }
-if(results[0].label == "irritado")
+if(results[0].label == "Bravo")
 { 
   document.getElementById("updateEmoji").innerHTML = "&#128548;";
 } 
@@ -72,7 +72,7 @@ if(results[1].label == "triste")
 { 
   document.getElementById("updateEmoji2").innerHTML = "&#128532;";
 }
-if(results[1].label == "irritado")
+if(results[1].label == "Bravo")
 { 
   document.getElementById("updateEmoji2").innerHTML = "&#128548;";
    }
