@@ -51,11 +51,11 @@ function gotResult(error, results) {
         prediction1 = results[0].label;
         prediction2 = results[1].label;
         speak();
-        if(results[0].label == "feliz")
+        if(results[0].label == "Feliz")
         {
             document.getElementById("updateEmoji").innerHTML = "&#128522;";
         }
-        if(results[0].label == "triste")
+        if(results[0].label == "Triste")
      { 
        document.getElementById("updateEmoji").innerHTML = "&#128532;";
 }
@@ -64,11 +64,11 @@ if(results[0].label == "Bravo")
   document.getElementById("updateEmoji").innerHTML = "&#128548;";
 } 
 
-if(results[1].label == "feliz")
+if(results[1].label == "Feliz")
 { 
   document.getElementById("updateEmoji2").innerHTML = "&#128522;";
 }
-if(results[1].label == "triste")
+if(results[1].label == "Triste")
 { 
   document.getElementById("updateEmoji2").innerHTML = "&#128532;";
 }
